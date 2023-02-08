@@ -1,11 +1,11 @@
 Exercise POO partie 1: Daniel Bronevitsky 
 
-
+#creation de la classe string
 1:
  class StringManipulation:
     def __init__(self):
         self.string = ""
-
+#definir string
     def set_string(self, string):
         self.string = string
 
@@ -17,27 +17,27 @@ string_manipulation.set_string("hello world")
 string_manipulation.print_string()
 
 
-2: 
+2: #creation de la classe rectangle et donner des proportions
 class Rectangle:
     def __init__(self, width, length):
         self.width = width
         self.length = length
-
+#definir calculer laire
     def calcul_aire(self):
         return self.width * self.length
-
+#definir afficher infos 
     def afficher_infos(self):
-        print("Largeur:", self.width)
+        print("Largeur:", self.width) #print les informations
         print("Longueur:", self.length)
-
+#definir les dimensions des rectangles
 rectangle = Rectangle(5, 10)
 rectangle.afficher_infos()
 print("Aire:", rectangle.calcul_aire())
 
-3: from math import pi
+3: from math import pi #importation du module math pi dans python
 
-class Circle:
-    def __init__(self, radius):
+class Circle: #creation de la classe circle 
+    def __init__(self, radius): #definition des parametres
         self.radius = radius
 
     def calcul_aire(self):
@@ -50,16 +50,16 @@ circle = Circle(5)
 print("Aire:", circle.calcul_aire())
 print("Périmètre:", circle.calcul_perimeter())
 
-4: import random
+4: import random #importation du module random
 
-class Hero:
+class Hero: #creation de la classe hero
     def __init__(self, name):
         self.nombre_point_de_vie = random.randint(2, 20)
         self.force_attaque = random.randint(1, 6)
         self.force_defense = random.randint(1, 6)
         self.nom_du_hero = name
 
-    def faire_une_attaque(self):
+    def faire_une_attaque(self): #definir faire une attaque 
         return random.randint(1, 6) + self.force_attaque
 
     def recevoir_des_dommages(self, dommages):
@@ -68,7 +68,7 @@ class Hero:
     def est_vivant(self):
         return self.nombre_point_de_vie > 0
 
-hero = Hero("Superman")
+hero = Hero("Superman") #print return
 print("Nom:", hero.nom_du_hero)
 print("Force d'attaque:", hero.force_attaque)
 print("Force de défense:", hero.force_defense)
