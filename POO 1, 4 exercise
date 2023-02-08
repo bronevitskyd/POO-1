@@ -1,0 +1,78 @@
+Exercise POO partie 1: Daniel Bronevitsky 
+
+
+1:
+ class StringManipulation:
+    def __init__(self):
+        self.string = ""
+
+    def set_string(self, string):
+        self.string = string
+
+    def print_string(self):
+        print(self.string.upper())
+
+string_manipulation = StringManipulation()
+string_manipulation.set_string("hello world")
+string_manipulation.print_string()
+
+
+2: 
+class Rectangle:
+    def __init__(self, width, length):
+        self.width = width
+        self.length = length
+
+    def calcul_aire(self):
+        return self.width * self.length
+
+    def afficher_infos(self):
+        print("Largeur:", self.width)
+        print("Longueur:", self.length)
+
+rectangle = Rectangle(5, 10)
+rectangle.afficher_infos()
+print("Aire:", rectangle.calcul_aire())
+
+3: from math import pi
+
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
+
+    def calcul_aire(self):
+        return pi * (self.radius ** 2)
+
+    def calcul_perimeter(self):
+        return 2 * pi * self.radius
+
+circle = Circle(5)
+print("Aire:", circle.calcul_aire())
+print("Périmètre:", circle.calcul_perimeter())
+
+4: import random
+
+class Hero:
+    def __init__(self, name):
+        self.nombre_point_de_vie = random.randint(2, 20)
+        self.force_attaque = random.randint(1, 6)
+        self.force_defense = random.randint(1, 6)
+        self.nom_du_hero = name
+
+    def faire_une_attaque(self):
+        return random.randint(1, 6) + self.force_attaque
+
+    def recevoir_des_dommages(self, dommages):
+        self.nombre_point_de_vie -= dommages - self.force_defense
+
+    def est_vivant(self):
+        return self.nombre_point_de_vie > 0
+
+hero = Hero("Superman")
+print("Nom:", hero.nom_du_hero)
+print("Force d'attaque:", hero.force_attaque)
+print("Force de défense:", hero.force_defense)
+print("Nombre de points de vie:", hero.nombre_point_de_vie)
+print("Est vivant:", hero.est_vivant())
+
+ 
